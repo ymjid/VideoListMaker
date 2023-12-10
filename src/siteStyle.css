@@ -1,0 +1,1060 @@
+		body {
+		    margin: 0;
+		    overflow-x: hidden;
+		    position: fixed;
+		    width: 100%;
+		    height: 100%;
+		    font-size: 15px;
+		    font-family:arial, sans-serif;
+		}
+
+		#blockContent {
+		    margin: 0 auto;
+		    display: block;
+		    width: 55%;
+		    overflow: hidden;
+		}
+
+
+		.bgTabPreview {
+		    width: 150px;
+		    cursor: pointer;
+		    vertical-align: middle;
+		    margin-left: 10px;
+		}
+
+		#videoBlock:not(.hidden)>#video {
+		    position: absolute;
+		    top: 0px;
+		}
+
+		.hidden #video_space {
+		    display: none;
+		}
+
+		#video_space {
+		    background-color: rgba(0, 0, 0, 0.8);
+		    display: flex;
+		    justify-content: center;
+		}
+
+		#videoBlock>* {
+		    width: 100%;
+		}
+
+		#videoTitle {
+		    text-align: center;
+		    display: block;
+		    font-size: 20px;
+		    padding-top: 10px;
+		    padding-bottom: 10px;
+		}
+
+		.videoListItem {
+		    padding-left: 30px;
+		    cursor: pointer;
+		    padding-right: 30px;
+		    padding-top: 5px;
+		    padding-bottom: 5px;
+		    margin-top: 0;
+		    margin-bottom: 0;
+		    text-align: center;
+		}
+
+		.videoListItem:not(:last-child) {
+		    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+		}
+
+		.videoListItem.active:before {
+		    content: '\25BA';
+		    left: -6px;
+		    position: relative;
+		    height: 18px;
+		    width: 18px;
+		}
+
+		.videoListItem.active {
+			margin-left: -15px;
+		}
+
+		.videoListItem:not(.active):hover {
+		    background-color: rgba(255, 255, 255, 0.2);
+		}
+
+		.editDataBlock.active > label:before {
+  			content: '\25BA';
+			left: 0px;
+  			position: relative;
+		}
+
+		#blockBackground {
+		    background-size: cover;
+		    background-position: center;
+		    color: white;
+		    height: inherit;
+		    background-image: url("../assets/wallpaper.jpg");
+		}
+
+		#blockLogo {
+		    max-height: 200px;
+		    margin: 0 auto;
+		    display: block;
+		    max-width: 100%;
+		    padding-top: 20px;
+		    padding-bottom: 20px;
+		}
+
+		#videoBlock.hidden {
+		    position: relative;
+		    display: flex;
+		    align-items: center;
+		    background-color: rgba(0, 0, 0, 0.4);
+		}
+
+		#fileList {
+		    max-height: 100px;
+		    overflow-y: auto;
+		    display: none;
+		    position: absolute;
+		    background-color: rgba(0, 0, 0, 0.3);
+		}
+
+		#fileList.show {
+		    display: block !important;
+		}
+
+		.blockLeft,
+		.blockRight {
+		    width: 8%;
+		    position: absolute;
+		    background-color: rgba(0, 0, 0, 0.6);
+		    cursor: pointer;
+		    min-width: 64px;
+		}
+
+		.active {
+		    background-color: rgba(255, 255, 255, 0.4);
+		}
+
+		.changeBlock>svg {
+		    width: 100%;
+		    height: 100%;
+		    fill: rgba(255, 255, 255, 0.8);
+		}
+
+		.changeBlock.blockRight>svg {
+		    transform: rotate(180deg);
+		}
+
+		#manageList #openListButton {
+		    right: 55px;
+		}
+
+		#editElems #openEdition {
+		    right: 227px;
+		}
+
+		#editElems {
+		    width: 500px;
+		}
+
+		body.loading {
+		    overflow: hidden;
+		}
+
+		.loading #blockBackground {
+		    opacity: 0;
+		    pointer-events: none;
+		}
+
+		body:not(.loading) #loadBlock {
+		    display: none;
+		}
+
+		#loadBlock {
+		    display: flex;
+		    justify-content: center;
+		    height: 100vh;
+		    align-items: center;
+		    color: white;
+		    background-color: rgba(0, 0, 0, 0.7);
+		    font-size: 20px;
+		}
+
+		#loadingBar {
+		    background-color: rgb(50, 50, 50);
+		    border-radius: 50px;
+		    border: 1px solid rgb(50, 50, 50);
+		    overflow-x: hidden;
+		}
+
+		#loadingBar,
+		#loadingBarProgress {
+		    width: 300px;
+		    height: 15px;
+		}
+
+		#loadingBarProgress {
+		    position: relative;
+		    background-color: rgb(200, 200, 200);
+		    transition: width 0.5s;
+		    border-radius: 50px;
+		}
+
+		.loading #loadingBarProgress {
+		    width: 0
+		}
+
+		#loadBlockContent {
+		    display: flex;
+		    align-items: center;
+		    flex-direction: column;
+		}
+
+		#addVideoForm,
+		#addSubtitleForm,
+		#removeSubtitleForm,
+		.whichGame,
+		.oldData,
+		#addBgForm {
+		    display: none;
+		}
+
+		#removeVideoForm,
+		#addListForm,
+		#removeBgForm {
+		    position: relative !important;
+		    background-color: rgba(0, 0, 0, 1);
+		    transform: translateY(100%);
+		    display: none;
+		    padding-top: 10px;
+		    padding-bottom: 10px;
+		}
+
+		#removeVideoForm {
+		    width: 320px;
+		    padding-left: 5px;
+		}
+
+		#removeBgForm {
+		    width: 210px;
+		    padding-left: 5px;
+		}
+
+		#addListForm {
+		    width: 400px;
+		    padding-left: 5px;
+		    z-index: 10;
+		    height: 100%;
+		}
+
+		#manageList.addListOpened #addListForm {
+		    transform: translate(0, 0);
+		    display: block;
+		}
+
+		#manageList.addListOpened {
+		    height: inherit;
+		    min-height: 150px;
+		}
+
+		.removeVideoOption {
+		    display: block;
+		    padding-bottom: 10px;
+		    padding-top: 10px;
+		}
+
+		.removeVideoOption:not(:last-child) {
+		    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+		}
+
+		.removeVideoOption>* {
+		    cursor: pointer;
+		}
+
+		#removeVideoOptionBlock,
+		#removeBgOptionBlock {
+		    overflow-y: auto;
+		    max-height: 286px;
+		}
+
+		.removeBgOption {
+		    margin-top: 10px;
+		    margin-bottom: 10px;
+		}
+
+		#ConfirmRemove,
+		#ConfirmCreate,
+		#ConfirmBgRemove {
+		    height: 20px;
+		    width: 20px;
+		    margin-left: 30px;
+		    cursor: pointer;
+		    fill: green;
+		    display: inline-block;
+		}
+
+		#closeAddListForm {
+		    height: 20px;
+		    width: 20px;
+		    margin-left: 30px;
+		    cursor: pointer;
+		    fill: red;
+		    display: inline-block;
+		    scale: 1.5;
+		}
+
+		#removeVideoForm>span,
+		#addListForm>span,
+		#removeBgForm>span {
+		    display: inline-block;
+		    vertical-align: top;
+		}
+
+		#removeBgForm>span {
+		    margin-bottom: 10px;
+		}
+
+		#notifications {
+		    position: fixed;
+		    right: 0;
+		    top: 20%;
+		    background-color: rgba(0, 0, 0, 0.6);
+		    border: none;
+		    width: 350px;
+		    transform: translateX(100%);
+		    transition: 0.5s;
+		    padding: 10px;
+		}
+
+		#notifications.active {
+		    transform: translateX(0%);
+		}
+
+		.disabled {
+		    opacity: 0.2;
+		    cursor: default !important;
+		}
+
+		.hidden>#video,
+		.hidden>#videoPlayer {
+		    visibility: hidden;
+		    pointer-events: none;
+		}
+
+		.hidden>#videoInfo,
+		.hidden>#videoMsg.hide,
+		#listNav.hide,
+		#videoBlock.hide,
+		#manageVideo.hide,
+		.hide,
+		#editVideoBlock.hide,
+		.hidden>#listMsg.hide {
+		    display: none !important;
+		}
+
+		#videoMsg,
+		#listMsg {
+		    font-size: 30px;
+		    width: 100%;
+		    height: 100%;
+		    background-color: rgba(0, 0, 0, 0.3);
+		    padding: 10px;
+		    box-sizing: border-box;
+		}
+
+		.hidden>#videoMsg,
+		.hidden>#listMsg {
+		    display: flex;
+		    align-items: center;
+		    justify-content: center;
+		    position: absolute;
+		    flex-direction: column;
+		}
+
+		.changeBlock.hide,
+		#blockContent.hidden,
+		#manageVideo.hidden {
+		    opacity: 0;
+		    pointer-events: none;
+		}
+
+		.removeVideoOption>label {
+		    width: 277px;
+		    display: inline-block;
+		    vertical-align: middle;
+		    word-break: break-word;
+		    margin-left: 5px;
+		}
+
+		.removeVideoOption>input {
+		    display: inline-block;
+		}
+
+		#videoInfo.play {
+		    opacity: 0;
+		}
+
+		#videoInfo.play:hover {
+		    opacity: 1 !important;
+		}
+
+		#videoTitleBlock {
+		    display: flex !important;
+		    justify-content: center;
+		    align-items: center;
+		    position: relative;
+		    background-color: rgba(0, 0, 0, 0.3);
+		    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+		}
+
+		#videoTitleArrow {
+		    width: 25px;
+		    height: 25px;
+		    fill: white;
+		}
+
+		#videoTitleArrow.upside {
+		    transform: rotate(180deg);
+		}
+
+		#videoTitleArrow:not(.upside) + .tips > span:first-child, #videoTitleArrow.upside + .tips > span:last-child {
+			display: block;
+		}
+
+		#videoTitleArrow.upside + .tips > span:first-child, #videoTitleArrow:not(.upside) + .tips > span:last-child {
+			display: none;
+		}
+
+		#listNav {
+		    height: 64px;
+		    width: 100%;
+		    background-color: rgba(0, 0, 0, 0.3);
+		    display: flex;
+		    justify-content: center;
+		    position: relative;
+		    opacity: 0;
+		}
+
+		#listNav:hover {
+		    opacity: 1;
+		}
+
+		#videoBlock.hidden #listNav {
+		    position: absolute !important;
+		    align-self: flex-end;
+		    transform: translateY(100%);
+		}
+
+		.gameSelect {
+		    width: 64px;
+		    height: 64px;
+		    cursor: pointer;
+		}
+
+		.gameSelect:hover {
+		    background-color: rgba(255, 255, 255, 0.3);
+		}
+
+		.listActive {
+		    cursor: inherit !important;
+		    background-color: rgba(255, 255, 255, 0.3);
+		}
+
+		.arrowListNav {
+		    position: absolute;
+		    cursor: pointer;
+		    z-index: 10;
+		    background-color: rgba(0, 0, 0, 0.3);
+		}
+
+		.arrowListNav svg {
+		    fill: rgba(255, 255, 255, 0.8);
+		}
+
+		#prevList {
+		    left: 0;
+		}
+
+		#nextList {
+		    right: 0;
+		}
+
+		#nextList svg {
+		    transform: rotate(180deg);
+		}
+
+		#listNavBlock {
+		    position: absolute;
+		    display: flex;
+		    justify-content: center;
+		}
+
+		.dragging,
+		.dragging>* {
+		    cursor: move;
+		}
+
+		form>span {
+		    font-weight: bold;
+		    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+		}
+
+		.tips {
+		    position: absolute;
+		    border: 1px solid white;
+		    color: white;
+		    background-color: black;
+		    display: none;
+		    max-width: 150px;
+		    bottom: 61px;
+		    padding: 5px;
+		    pointer-events: none;
+		    word-wrap: break-word;
+		}
+
+		#removeList + .tips {
+			margin-left: -60%;
+		}
+
+		.subtitleActionBlock .tips {
+		    right: 40px;
+		}
+
+		.fullscreenActionBlock .tips {
+		    right: 0px;
+		}
+
+		.panelAction {
+		    position: relative;
+		}
+
+		#editElems .panelAction .tips {
+		    left: 40%;
+		}
+
+		.playerActionBlock .tips,
+		.volumeActionBlock .tips,
+		.subtitleActionBlock .tips,
+		.fullscreenActionBlock .tips {
+		    bottom: 45px;
+		}
+
+		#subtitleOption.subOff .subtitleActionBlock:last-child .tips>span:first-child,
+		#subtitleOption:not(.subOff) .subtitleActionBlock:last-child .tips>span:last-child {
+		    display: none !important;
+		}
+
+		.listOption:not(.disabled):hover .tips,
+		.videoOption:not(.disabled):hover .tips,
+		.changeList:not(.disabled):hover .tips,
+		.changeBlock:not(.disabled):hover .tips,
+		#videoInfo:not(.disabled):hover #videoTitleArrow:not(.hide)~.tips,
+		.gameSelectBlock:not(.disabled):hover .tips,
+		.subtitleActionBlock:not(.disabled):hover .tips,
+		.fullscreenActionBlock:not(.disabled):hover .tips,
+		.volumeActionBlock:not(.disabled):hover .tips,
+		.playerActionBlock:not(.disabled):hover .tips,
+		.panelAction:not(.disabled):hover .tips,
+		.bgOption:not(.disabled):hover .tips {
+		    display: block;
+		}
+
+		.removeVidOpened .videoOption:not(.disabled):hover .tips,
+		*.disabled:hover~.tips,
+		.removeBgOpened .bgOption:not(.disabled):hover .tips {
+		    display: none !important;
+		}
+
+		.changeList .tips {
+		    bottom: 100%;
+		}
+
+		.changeList#nextList .tips {
+		    left: -100%;
+		}
+
+		.changeBlock .tips {
+		    bottom: 65%;
+		}
+
+		.changeBlock.blockLeft .tips {
+		    left: 0%;
+		}
+
+		.changeBlock.blockRight .tips {
+		    right: 0%;
+		}
+
+		#manageVideo.opened.removeVidOpened .tips {
+		    left: 60% !important;
+		}
+
+		#manageList.opened.addListOpened .tips {
+		    left: 68% !important;
+		}
+
+		#listNavSlider {
+		    width: 100%;
+		    position: absolute;
+		    height: 64px;
+		    display: flex;
+		    justify-content: center;
+		    z-index: 1;
+		}
+
+		.gameSelectBlock {
+		    width: 64px;
+		    height: 64px;
+		}
+
+		#videoInfo {
+		    position: absolute;
+		}
+
+		#videoPlayer {
+		    display: flex;
+		    align-items: center;
+		    position: absolute;
+		    margin-top: -44px;
+		    background-color: rgba(0, 0, 0, 0.3);
+		    border-top: 1px solid rgba(255, 255, 255, 0.3);
+		    padding-top: 5px;
+		    padding-bottom: 5px;
+		    max-height: 31px;
+		}
+
+		#videoPlayer svg {
+		    fill: rgba(255, 255, 255, 0.8);
+		    width: 29px;
+		    height: 29px;
+		    cursor: pointer;
+		    display: block;
+		}
+
+		#videoPlayer.play:hover {
+		    opacity: 1 !important;
+		}
+
+		#videoPlayer.play {
+		    opacity: 0;
+		}
+
+		#videoPlayer.play #playIcon,
+		#videoPlayer:not(.play) #pauseIcon,
+		#videoPlayer.mute #unmuteIcon,
+		#videoPlayer:not(.mute) #muteIcon,
+		#videoBlock.fullscreen #fullscreenIcon,
+		#videoBlock:not(.fullscreen) #screenIcon {
+		    display: none;
+		}
+
+		#videoPlayer.play #pauseIcon,
+		#videoPlayer:not(.play) #playIcon #videoPlayer.mute #muteIcon,
+		#videoPlayer:not(.mute) #unmuteIcon,
+		#videoBlock.fullscreen #screenIcon,
+		#videoBlock:not(.fullscreen) #fullscreenIcon {
+		    display: block;
+		}
+
+		#muteButton {
+		    max-width: 29px;
+		}
+
+		#videoPlayer #volumePlayer {
+		    width: 100%;
+		    position: relative;
+		    display: flex;
+		    align-items: center;
+		}
+
+		#videoLength,
+		#volumeBlock {
+		    min-width: 86px;
+		}
+
+		#videoLength {
+			display: flex;
+    		justify-content: space-around;
+		}
+
+		#videoData,
+		#volumeBlock {
+		    display: flex;
+		    align-items: center;
+		    padding-left: 5px;
+		    padding-right: 5px;
+		}
+
+		#seekPlayer,
+		#fullscreenButton {
+		    padding-left: 5px;
+		    padding-right: 5px;
+		}
+
+		#videoData,
+		#seekPlayer,
+		#seekButton,
+		#volumeButton {
+		    width: 100%;
+		}
+
+		#seekPlayer {
+		    position: relative;
+		    align-self: baseline;
+		}
+
+		#volumeButton,
+		#seekButton {
+		    opacity: 0;
+		    cursor: pointer;
+		    position:absolute;
+		}
+
+		.progressBarLimit {
+		    height: 10px;
+		    width: 100%;
+		    background-color: rgb(50, 50, 50);
+		    position: absolute;
+		    pointer-events: none;
+		    margin: 2px;
+		    border-radius: 50px;
+		}
+
+		.progressBar {
+		    height: 100%;
+		    background-color: rgb(200, 200, 200);
+		    border-radius: 50px;
+		}
+
+		#videoBar {
+		    width: 0px;
+		}
+
+		#videoPlayer.mute #volumeBar {
+		    background-color: rgb(150, 150, 150);
+		}
+
+		#videoBlock {
+		    position: relative;
+		}
+
+		#videoSubtitleBlock {
+		    position: absolute;
+		    margin-top: -50px;
+		    width: 50%;
+		    left: calc((100% - 50%)/2);
+		    text-align: center;
+		    background-color: rgba(0, 0, 0, 0.6);
+		    font-size: 1.3rem;
+		    transform: translateY(-100%);
+		}
+
+		#subtitleOption.subOff #subtitleIcon {
+		    fill: rgb(150, 150, 150) !important;
+		}
+
+		#subtitleOptionBlock {
+		    display: flex;
+		    flex-direction: column;
+		    border: 1px solid transparent;
+		    align-items: center;
+		}
+
+		#subtitleOption {
+		    width: 29px;
+		    flex-direction: column;
+		    align-items: center;
+		}
+
+		#subtitleOption:not(.hide) {
+		    display: flex;
+		}
+
+		#subtitleOption .subtitleActionBlock:last-child {
+		    border-bottom: 1px solid black;
+		}
+
+		#subtitleOptionBlock.open {
+		    transform: translateY(-37%);
+		}
+
+		#subtitleOptionBlock.small.open {
+		    transform: translateY(-25%);
+		}
+
+		#removeSubtitleIcon,
+		#uploadSubtitleIcon,
+		#subtitleIcon,
+		#subtitleOptionBlock.open #subtitleOptionButton {
+		    padding: 3px;
+		}
+
+		#subtitleOptionBlock.open #uploadSubtitleIcon {
+		    border-top: 1px solid rgba(255, 255, 255, 0.3);
+		    border-left: 1px solid rgba(255, 255, 255, 0.3);
+		    border-right: 1px solid rgba(255, 255, 255, 0.3);
+		    background-color: rgba(0, 0, 0, 0.3);
+		}
+
+		#subtitleOptionBlock:not(.open) #removeSubtitleIcon {
+		    border-top: 1px solid transparent;
+		}
+
+		#subtitleOptionBlock:not(.open) #subtitleOptionButton {
+		    padding-left: 3px;
+		    padding-right: 3px;
+		}
+
+		#subtitleOptionBlock.open #removeSubtitleIcon,
+		#subtitleIcon {
+		    border-top: 1px solid rgba(0, 0, 0, 0.3);
+		    border-left: 1px solid rgba(255, 255, 255, 0.3);
+		    border-right: 1px solid rgba(255, 255, 255, 0.3);
+		}
+
+		#subtitleOptionBlock.open #subtitleOptionButton {
+		    background-color: rgba(0, 0, 0, 0.3);
+		}
+
+		.videoSubtitle {
+		    display: block;
+		}
+
+
+		.editSectionIcon {
+		    width: 40px;
+		    height: 40px;
+		    fill: white;
+		    cursor: pointer;
+		}
+
+		.editSectionBlock {
+		    display: flex;
+		    justify-content: space-evenly;
+		    align-items: center;
+		    padding-top: 20px;
+		    padding-bottom: 20px;
+		    margin-left: 20px;
+		    margin-right: 20px;
+		}
+
+		.editSectionBlock:not(:last-child) {
+		    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+		}
+
+		#editElems {
+		    height: inherit !important;
+		}
+
+		.editSectionData {
+		    width: 75%;
+		}
+
+		.editSectionData form,
+		.editDataBlock {
+		    display: flex;
+		    justify-content: space-evenly;
+		    flex-direction: column;
+		}
+
+		.previewImg {
+		    max-width: 25%;
+		    ;
+		    margin-top: 10px;
+		    margin-bottom: 10px;
+		    pointer-events: none;
+		}
+
+		.editDataBlock {
+		    margin-top: 10px;
+		    margin-bottom: 10px;
+		    padding-left: 10px;
+  			padding-right: 10px;
+  			padding-bottom: 10px;
+		}
+
+		#currentIconPreview {
+		    width: 60px;
+		}
+
+		.confirmButton {
+		    width: 32px;
+		    height: 32px;
+		    fill: green;
+		    cursor: pointer;
+		}
+
+		.resetButton {
+		    width: 32px;
+		    height: 32px;
+		    fill: red;
+		    cursor: pointer;
+		}
+
+		.formButtonBlock {
+		    display: flex;
+		    justify-content: space-evenly;
+		    margin-top: 10px;
+		}
+
+		#editVideoFormOption,
+		#editListFormOption,
+		#editBgFormOption {
+		    max-height: 215px;
+		    overflow-y: auto;
+		}
+
+		#manageVideo svg#openButton,
+		#manageList svg#openListButton,
+		#editElems svg#openEdition,
+		#manageBg svg#openBgButton {
+		    width: 50px;
+		    height: 50px;
+		    fill: white;
+		    transform: translateY(-100%);
+		    padding: 5px;
+		    background-color: rgba(0, 0, 0, 1);
+		    cursor: pointer;
+		    position: absolute;
+		}
+
+		#manageVideo.opened,
+		#manageList.opened,
+		#editElems.opened,
+		#manageBg.opened {
+		    transform: translateY(0);
+		    z-index: 10;
+		}
+
+		#manageVideo,
+		#manageList,
+		#editElems,
+		#manageBg {
+		    position: fixed;
+		    right: 20px;
+		    bottom: 0px;
+		    background-color: rgba(0, 0, 0, 1);
+		    transform: translateY(100%);
+		    transition: all 0.5s;
+		    z-index: 1;
+		}
+
+		#manageVideoBlock #addVideo,
+		#manageListBlock #addList,
+		#manageBgBlock #addBg {
+		    fill: lawngreen;
+		}
+
+		#manageVideoBlock #removeVideo,
+		#manageListBlock #removeList,
+		#manageBgBlock #removeBg {
+		    fill: red;
+		}
+
+		#manageVideoBlock,
+		#manageListBlock,
+		#manageBgBlock {
+		    display: flex;
+		}
+
+		.addListOpened #addList,
+		.addListOpened #removeList,
+		.removeVidOpened #addVideo,
+		.removeVidOpened #removeVideo,
+		.removeBgOpened #removeBg,
+		.removeBgOpened #addBg {
+		    display: none;
+		}
+
+		#manageVideoBlock #addVideo,
+		#manageVideoBlock #removeVideo,
+		#manageListBlock #addList,
+		#manageListBlock #removeList,
+		#manageBgBlock #addBg,
+		#manageBgBlock #removeBg {
+		    width: 60px;
+		    height: 60px;
+		    cursor: pointer;
+		}
+
+		#manageVideo.removeVidOpened #manageVideoBlock #removeVideo,
+		#manageBg.removeBgOpened #manageBgBlock #removeBg {
+		    transform: translateX(167px);
+		}
+
+		#manageVideo.removeVidOpened #removeVideoForm,
+		#manageBg.removeBgOpened #removeBgForm {
+		    transform: translateY(0);
+		    display: block;
+		}
+
+		#manageVideo {
+		    right: 105px;
+		}
+
+		#manageBg {
+		    right: inherit;
+		    left: 105px;
+		}
+
+		#openButton {
+		    right: 60px;
+		}
+
+		#manageVideoBlock,
+		#manageListBlock,
+		#manageBgBlock {
+		    padding: 10px;
+		}
+
+		#resetRemove,
+		#resetBgRemove {
+		    fill: red;
+		    scale: 1.5;
+		    cursor: pointer;
+		    width: 20px;
+		    height: 20px;
+		    margin-left: 20px;
+		}
+
+		.tutoIcon {
+		    width: 40px;
+		    height: 40px;
+		    margin-bottom: -10px;
+		}
+
+		.msgTitle {
+		    font-size: 45px;
+		    font-weight: bold;
+		}
+
+		#logoBlock {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		#logoBlock > img {
+			max-height: 150px;
+  			filter: invert();
+		}
+
+		#logoBlock > h1 {
+			display: inline;
+			font-size: 50px;
+			margin: 33.5px;
+		}
+
+		footer {
+			position: fixed;
+  			bottom: 0 !important;
+  			background-color: rgba(0, 0, 0, 0.6) !important;
+  			margin: 0 auto;
+  			display: block;
+  			width: 55%;
+		}
+
+		footer > p {
+			margin:10px;
+		}

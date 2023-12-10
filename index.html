@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Video List Maker</title>
+    <link rel="icon" type="image/x-icon" href="./assets/video_icon.ico">
+    <link rel="stylesheet" type="text/css" href="./src/siteStyle.css">
+</head>
+
+<body class="loading">
+    <div id="loadBlock">
+        <div id=loadBlockContent>
+            <span>Loading</span>
+            <div id="loadingBar">
+                <div id="loadingBarProgress"></div>
+            </div>
+        </div>
+    </div>
+    <div id="blockBackground" style="">
+        <div id="blockContent">
+            <div>
+            <img src="" id="blockLogo">
+            <div id="logoBlock">
+                <img src="./assets/video_logo.png">
+                <h1>Video List Maker</h1>
+            </div>
+            </div>
+            <div class="changeBlock blockLeft buttonLeft hide">
+                <?xml version="1.0" ?>
+                <!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg height="512px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="512px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <path d="M327.3,98.9l-2.1,1.8l-156.5,136c-5.3,4.6-8.6,11.5-8.6,19.2c0,7.7,3.4,14.6,8.6,19.2L324.9,411l2.6,2.3  c2.5,1.7,5.5,2.7,8.7,2.7c8.7,0,15.8-7.4,15.8-16.6h0V112.6h0c0-9.2-7.1-16.6-15.8-16.6C332.9,96,329.8,97.1,327.3,98.9z" /></svg>
+                <div class="tips">
+                    <span>Go to the previous video</span>
+                </div>
+            </div>
+            <div class="changeBlock blockRight buttonRight hide">
+                <?xml version="1.0" ?>
+                <!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg height="512px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="512px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <path d="M327.3,98.9l-2.1,1.8l-156.5,136c-5.3,4.6-8.6,11.5-8.6,19.2c0,7.7,3.4,14.6,8.6,19.2L324.9,411l2.6,2.3  c2.5,1.7,5.5,2.7,8.7,2.7c8.7,0,15.8-7.4,15.8-16.6h0V112.6h0c0-9.2-7.1-16.6-15.8-16.6C332.9,96,329.8,97.1,327.3,98.9z" /></svg>
+                <div class="tips">
+                    <span>Go to the next video</span>
+                </div>
+            </div>
+            <div id="videoBlock">
+                <div id="videoMsg" class="hide">
+                    <span class="msgTitle">No video found</span>
+                    <p class="msgDesc">
+                        To upload a new video, open the 'Video Panel' by clicking on the
+                        <?xml version="1.0" ?><svg class="tutoIcon" style="fill:white;" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M463.1 32h-416C21.49 32-.0001 53.49-.0001 80v352c0 26.51 21.49 48 47.1 48h416c26.51 0 48-21.49 48-48v-352C511.1 53.49 490.5 32 463.1 32zM111.1 408c0 4.418-3.582 8-8 8H55.1c-4.418 0-8-3.582-8-8v-48c0-4.418 3.582-8 8-8h47.1c4.418 0 8 3.582 8 8L111.1 408zM111.1 280c0 4.418-3.582 8-8 8H55.1c-4.418 0-8-3.582-8-8v-48c0-4.418 3.582-8 8-8h47.1c4.418 0 8 3.582 8 8V280zM111.1 152c0 4.418-3.582 8-8 8H55.1c-4.418 0-8-3.582-8-8v-48c0-4.418 3.582-8 8-8h47.1c4.418 0 8 3.582 8 8L111.1 152zM351.1 400c0 8.836-7.164 16-16 16H175.1c-8.836 0-16-7.164-16-16v-96c0-8.838 7.164-16 16-16h160c8.836 0 16 7.162 16 16V400zM351.1 208c0 8.836-7.164 16-16 16H175.1c-8.836 0-16-7.164-16-16v-96c0-8.838 7.164-16 16-16h160c8.836 0 16 7.162 16 16V208zM463.1 408c0 4.418-3.582 8-8 8h-47.1c-4.418 0-7.1-3.582-7.1-8l0-48c0-4.418 3.582-8 8-8h47.1c4.418 0 8 3.582 8 8V408zM463.1 280c0 4.418-3.582 8-8 8h-47.1c-4.418 0-8-3.582-8-8v-48c0-4.418 3.582-8 8-8h47.1c4.418 0 8 3.582 8 8V280zM463.1 152c0 4.418-3.582 8-8 8h-47.1c-4.418 0-8-3.582-8-8l0-48c0-4.418 3.582-8 7.1-8h47.1c4.418 0 8 3.582 8 8V152z" /></svg> button and click on the
+                        <?xml version="1.0" ?>
+                        <!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg class="tutoIcon" style="fill:lawngreen" enable-background="new 0 0 70 70" height="70px" id="Icons" version="1.1" viewBox="0 0 70 70" width="70px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <polygon points="53,32.5 37.5,32.5 37.5,17 32.5,17 32.5,32.5 17,32.5 17,37.5 32.5,37.5 32.5,53 37.5,53 37.5,37.5 53,37.5 " /></svg> button.
+                    </p>
+                </div>
+                <div id="listMsg" class="hide">
+                    <span class="msgTitle">No list found</span>
+                    <p class="msgDesc">
+                        To create a new list, open the 'List Panel' by clicking on the
+                        <?xml version="1.0" ?><svg class="tutoIcon" style="fill:white;" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M448 32H64C28.65 32 0 60.65 0 96v320c0 35.35 28.65 64 64 64h384c35.35 0 64-28.65 64-64V96C512 60.65 483.3 32 448 32zM64 96h64v64H64V96zM64 224h64v64H64V224zM64 416v-64h64v64H64zM448 416H192v-64h256V416zM448 288H192V224h256V288zM448 160H192V96h256V160z" /></svg> button and click on the
+                        <?xml version="1.0" ?>
+                        <!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg class="tutoIcon" style="fill:lawngreen" enable-background="new 0 0 70 70" height="70px" id="Icons" version="1.1" viewBox="0 0 70 70" width="70px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <polygon points="53,32.5 37.5,32.5 37.5,17 32.5,17 32.5,32.5 17,32.5 17,37.5 32.5,37.5 32.5,53 37.5,53 37.5,37.5 53,37.5 " /></svg> button to open the list form.
+                    </p>
+                </div>
+                <div id="video_space">
+                    <?xml version="1.0" ?><svg style="fill:rgb(230,230,230); width:15%;" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M463.1 32h-416C21.49 32-.0001 53.49-.0001 80v352c0 26.51 21.49 48 47.1 48h416c26.51 0 48-21.49 48-48v-352C511.1 53.49 490.5 32 463.1 32zM111.1 408c0 4.418-3.582 8-8 8H55.1c-4.418 0-8-3.582-8-8v-48c0-4.418 3.582-8 8-8h47.1c4.418 0 8 3.582 8 8L111.1 408zM111.1 280c0 4.418-3.582 8-8 8H55.1c-4.418 0-8-3.582-8-8v-48c0-4.418 3.582-8 8-8h47.1c4.418 0 8 3.582 8 8V280zM111.1 152c0 4.418-3.582 8-8 8H55.1c-4.418 0-8-3.582-8-8v-48c0-4.418 3.582-8 8-8h47.1c4.418 0 8 3.582 8 8L111.1 152zM351.1 400c0 8.836-7.164 16-16 16H175.1c-8.836 0-16-7.164-16-16v-96c0-8.838 7.164-16 16-16h160c8.836 0 16 7.162 16 16V400zM351.1 208c0 8.836-7.164 16-16 16H175.1c-8.836 0-16-7.164-16-16v-96c0-8.838 7.164-16 16-16h160c8.836 0 16 7.162 16 16V208zM463.1 408c0 4.418-3.582 8-8 8h-47.1c-4.418 0-7.1-3.582-7.1-8l0-48c0-4.418 3.582-8 8-8h47.1c4.418 0 8 3.582 8 8V408zM463.1 280c0 4.418-3.582 8-8 8h-47.1c-4.418 0-8-3.582-8-8v-48c0-4.418 3.582-8 8-8h47.1c4.418 0 8 3.582 8 8V280zM463.1 152c0 4.418-3.582 8-8 8h-47.1c-4.418 0-8-3.582-8-8l0-48c0-4.418 3.582-8 7.1-8h47.1c4.418 0 8 3.582 8 8V152z" /></svg>
+                </div>
+                <video id="video">
+                    <source id="videoFile" src="" type="">
+                </video>
+                <div id="videoSubtitleBlock">
+                </div>
+                <div id="videoPlayer">
+                    <div id="playButton" class="playerButton">
+                        <div class="playerActionBlock">
+                            <?xml version="1.0" ?><svg id="playIcon" height="48" viewBox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M-838-2232H562v3600H-838z" fill="none" />
+                                <path d="M16 10v28l22-14z" />
+                                <path d="M0 0h48v48H0z" fill="none" /></svg>
+                            <div class="tips">
+                                <span>Play</span>
+                            </div>
+                        </div>
+                        <div class="playerActionBlock">
+                            <?xml version="1.0" ?><svg id="pauseIcon" height="48" viewBox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 38h8V10h-8v28zm16-28v28h8V10h-8z" />
+                                <path d="M0 0h48v48H0z" fill="none" /></svg>
+                            <div class="tips">
+                                <span>Pause</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="volumeBlock" class="playerButton">
+                        <div id="muteButton">
+                            <div class="volumeActionBlock">
+                                <?xml version="1.0" ?><svg id="unmuteIcon" height="48" viewBox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6 18v12h8l10 10V8L14 18H6zm27 6c0-3.53-2.04-6.58-5-8.05v16.11c2.96-1.48 5-4.53 5-8.06zM28 6.46v4.13c5.78 1.72 10 7.07 10 13.41s-4.22 11.69-10 13.41v4.13c8.01-1.82 14-8.97 14-17.54S36.01 8.28 28 6.46z" />
+                                    <path d="M0 0h48v48H0z" fill="none" /></svg>
+                                <div class="tips">
+                                    <span>Mute video</span>
+                                </div>
+                            </div>
+                            <div class="volumeActionBlock">
+                                <?xml version="1.0" ?><svg id="muteIcon" height="48" viewBox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M33 24c0-3.53-2.04-6.58-5-8.05v4.42l4.91 4.91c.06-.42.09-.85.09-1.28zm5 0c0 1.88-.41 3.65-1.08 5.28l3.03 3.03C41.25 29.82 42 27 42 24c0-8.56-5.99-15.72-14-17.54v4.13c5.78 1.72 10 7.07 10 13.41zM8.55 6L6 8.55 15.45 18H6v12h8l10 10V26.55l8.51 8.51c-1.34 1.03-2.85 1.86-4.51 2.36v4.13c2.75-.63 5.26-1.89 7.37-3.62L39.45 42 42 39.45l-18-18L8.55 6zM24 8l-4.18 4.18L24 16.36V8z" />
+                                    <path d="M0 0h48v48H0z" fill="none" /></svg>
+                                <div class="tips">
+                                    <span>Unmute video</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="volumePlayer">
+                            <input id="volumeButton" type="range" min="0" max="1" step="0.01" value="1">
+                            <div id="volumeProgress" class="progressBarLimit">
+                                <div id="volumeBar" class="progressBar"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="videoData">
+                        <div id="videoLength">
+                            <span id="videoCurrentTime">CurrentTime</span>
+                            <span> | </span>
+                            <span id="videoDuration">Duration</span>
+                        </div>
+                        <div id="seekPlayer">
+                            <input id="seekButton" type="range" min="0" step="0.01" value="0">
+                            <div id="videoProgress" class="progressBarLimit">
+                                <div id="videoBar" class="progressBar"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="subtitleOptionBlock" class="playerButton">
+                        <div id="subtitleOption" class="hide">
+                            <div class="subtitleActionBlock">
+                                <?xml version="1.0" ?><svg id="uploadSubtitleIcon" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15,3.41421356 L15,7 L18.5857864,7 L15,3.41421356 Z M19,9 L15,9 C13.8954305,9 13,8.1045695 13,7 L13,3 L5,3 L5,21 L19,21 L19,9 Z M5,1 L15.4142136,1 L21,6.58578644 L21,21 C21,22.1045695 20.1045695,23 19,23 L5,23 C3.8954305,23 3,22.1045695 3,21 L3,3 C3,1.8954305 3.8954305,1 5,1 Z M13,13.4142136 L13,18 L11,18 L11,13.4142136 L9.70710678,14.7071068 L8.29289322,13.2928932 L12,9.58578644 L15.7071068,13.2928932 L14.2928932,14.7071068 L13,13.4142136 Z" fill-rule="evenodd" /></svg>
+                                <form id="addSubtitleForm" action="./src/edit.php" method="post" enctype="multipart/form-data" target="notifications">
+                                    <input type="file" name="newSubtitle" id="newSubtitle" accept=".txt,.json">
+                                    <input type="text" name="newSubtitleName" pattern="[a-zA-Z0-9\s]+" id="newSubtitleName" value="">
+                                    <input class="whichGame" type="text" name="game" value="">
+                                </form>
+                                <div class="tips">
+                                    <span>Upload subtitle file for this video</span>
+                                </div>
+                            </div>
+                            <div class="subtitleActionBlock">
+                                <?xml version="1.0" ?><svg id="removeSubtitleIcon" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12,12.5857864 L14.2928932,10.2928932 L15.7071068,11.7071068 L13.4142136,14 L15.7071068,16.2928932 L14.2928932,17.7071068 L12,15.4142136 L9.70710678,17.7071068 L8.29289322,16.2928932 L10.5857864,14 L8.29289322,11.7071068 L9.70710678,10.2928932 L12,12.5857864 Z M15,3.41421356 L15,7 L18.5857864,7 L15,3.41421356 Z M19,9 L15,9 C13.8954305,9 13,8.1045695 13,7 L13,3 L5,3 L5,21 L19,21 L19,9 Z M5,1 L15.4142136,1 L21,6.58578644 L21,21 C21,22.1045695 20.1045695,23 19,23 L5,23 C3.8954305,23 3,22.1045695 3,21 L3,3 C3,1.8954305 3.8954305,1 5,1 Z" fill-rule="evenodd" /></svg>
+                                <form id="removeSubtitleForm" action="./src/edit.php" method="post" enctype="multipart/form-data" target="notifications">
+                                    <input type="text" name="removeSubtitleName" id="removeSubtitleName" value="">
+                                    <input class="whichGame" type="text" name="game" value="">
+                                </form>
+                                <div class="tips">
+                                    <span>Remove subtitle file for this video</span>
+                                </div>
+                            </div>
+                            <div class="subtitleActionBlock">
+                                <?xml version="1.0" ?><svg id="subtitleIcon" height="24" viewBox="0 0 48 48" width="24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 0h48v48H0z" fill="none" />
+                                    <path d="M40 8H8c-2.21 0-4 1.79-4 4v24c0 2.21 1.79 4 4 4h32c2.21 0 4-1.79 4-4V12c0-2.21-1.79-4-4-4zM8 24h8v4H8v-4zm20 12H8v-4h20v4zm12 0h-8v-4h8v4zm0-8H20v-4h20v4z" /></svg>
+                                <div class="tips">
+                                    <span>Hide subtitles</span>
+                                    <span>Show subtitles</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="subtitleActionBlock">
+                            <?xml version="1.0" ?><svg id="subtitleOptionButton" style="enable-background:new 0 0 24 24;" version="1.1" viewBox="0 0 24 24" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <g id="info" />
+                                <g id="icons">
+                                    <path d="M22.2,14.4L21,13.7c-1.3-0.8-1.3-2.7,0-3.5l1.2-0.7c1-0.6,1.3-1.8,0.7-2.7l-1-1.7c-0.6-1-1.8-1.3-2.7-0.7   L18,5.1c-1.3,0.8-3-0.2-3-1.7V2c0-1.1-0.9-2-2-2h-2C9.9,0,9,0.9,9,2v1.3c0,1.5-1.7,2.5-3,1.7L4.8,4.4c-1-0.6-2.2-0.2-2.7,0.7   l-1,1.7C0.6,7.8,0.9,9,1.8,9.6L3,10.3C4.3,11,4.3,13,3,13.7l-1.2,0.7c-1,0.6-1.3,1.8-0.7,2.7l1,1.7c0.6,1,1.8,1.3,2.7,0.7L6,18.9   c1.3-0.8,3,0.2,3,1.7V22c0,1.1,0.9,2,2,2h2c1.1,0,2-0.9,2-2v-1.3c0-1.5,1.7-2.5,3-1.7l1.2,0.7c1,0.6,2.2,0.2,2.7-0.7l1-1.7   C23.4,16.2,23.1,15,22.2,14.4z M12,16c-2.2,0-4-1.8-4-4c0-2.2,1.8-4,4-4s4,1.8,4,4C16,14.2,14.2,16,12,16z" />
+                                </g>
+                            </svg>
+                            <div class="tips">
+                                <span>Player options</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="fullscreenButton" class="playerButton">
+                        <div class="fullscreenActionBlock">
+                            <?xml version="1.0" ?><svg id="fullscreenIcon" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="m21 15.344-2.121 2.121-3.172-3.172-1.414 1.414 3.172 3.172L15.344 21H21zM3 8.656l2.121-2.121 3.172 3.172 1.414-1.414-3.172-3.172L8.656 3H3zM21 3h-5.656l2.121 2.121-3.172 3.172 1.414 1.414 3.172-3.172L21 8.656zM3 21h5.656l-2.121-2.121 3.172-3.172-1.414-1.414-3.172 3.172L3 15.344z" /></svg>
+                            <div class="tips">
+                                <span>Activate fullscreen</span>
+                            </div>
+                        </div>
+                        <div class="fullscreenActionBlock">
+                            <?xml version="1.0" ?><svg id="screenIcon" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 4H8v4H4v2h6zM8 20h2v-6H4v2h4zm12-6h-6v6h2v-4h4zm0-6h-4V4h-2v6h6z" /></svg>
+                            <div class="tips">
+                                <span>Deactivate fullscreen</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="videoInfo">
+                    <div id="videoTitleBlock">
+                        <span id="videoTitle"></span>
+                        <span id="videoTitleArrow" class="hide">
+                            <?xml version="1.0" ?>
+                            <!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg height="25px" id="LayerArrow_1" style="enable-background:new 0 0 25 25;" version="1.1" viewBox="0 0 512 512" width="25px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <path d="M98.9,184.7l1.8,2.1l136,156.5c4.6,5.3,11.5,8.6,19.2,8.6c7.7,0,14.6-3.4,19.2-8.6L411,187.1l2.3-2.6  c1.7-2.5,2.7-5.5,2.7-8.7c0-8.7-7.4-15.8-16.6-15.8v0H112.6v0c-9.2,0-16.6,7.1-16.6,15.8C96,179.1,97.1,182.2,98.9,184.7z" /></svg>
+                        </span>
+                        <div class="tips">
+                            <span>Open the video list</span>
+                            <span>Close the video list</span>
+                        </div>
+                    </div>
+                    <div id="fileList">
+                    </div>
+                </div>
+            </div>
+            <div id="listNav" class="hide">
+                <div id="prevList" class="changeList arrowListNav">
+                    <?xml version="1.0" ?>
+                    <!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg height="64px" id="Layer_1" style="enable-background:new 0 0 64 64;" version="1.1" viewBox="0 0 512 512" width="64px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <path d="M327.3,98.9l-2.1,1.8l-156.5,136c-5.3,4.6-8.6,11.5-8.6,19.2c0,7.7,3.4,14.6,8.6,19.2L324.9,411l2.6,2.3  c2.5,1.7,5.5,2.7,8.7,2.7c8.7,0,15.8-7.4,15.8-16.6h0V112.6h0c0-9.2-7.1-16.6-15.8-16.6C332.9,96,329.8,97.1,327.3,98.9z" /></svg>
+                    <div class="tips">
+                        <span>Go to the previous list</span>
+                    </div>
+                </div>
+                <div id="nextList" class="changeList arrowListNav">
+                    <?xml version="1.0" ?>
+                    <!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg height="64px" id="Layer_1" style="enable-background:new 0 0 64 64;" version="1.1" viewBox="0 0 512 512" width="64px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <path d="M327.3,98.9l-2.1,1.8l-156.5,136c-5.3,4.6-8.6,11.5-8.6,19.2c0,7.7,3.4,14.6,8.6,19.2L324.9,411l2.6,2.3  c2.5,1.7,5.5,2.7,8.7,2.7c8.7,0,15.8-7.4,15.8-16.6h0V112.6h0c0-9.2-7.1-16.6-15.8-16.6C332.9,96,329.8,97.1,327.3,98.9z" /></svg>
+                    <div class="tips">
+                        <span>Go to the next list</span>
+                    </div>
+                </div>
+                <div id="listNavSlider">
+                    <div id="listNavBlock">
+                    </div>
+                </div>
+            </div>
+            <div id="manageBg" class="panel hide">
+                <div class="panelAction">
+                    <?xml version="1.0" ?><svg id="openBgButton" height="18px" version="1.1" viewBox="0 0 18 18" width="18px" xmlns="http://www.w3.org/2000/svg" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <title />
+                        <desc />
+                        <defs />
+                        <g fill="none" fill-rule="evenodd" id="Page-1" stroke="none" stroke-width="1">
+                            <g fill="#FFFFFF" id="Core" transform="translate(-171.000000, -171.000000)">
+                                <g id="drive-image" transform="translate(171.000000, 171.000000)">
+                                    <path d="M18,16 L18,2 C18,0.9 17.1,0 16,0 L2,0 C0.9,0 0,0.9 0,2 L0,16 C0,17.1 0.9,18 2,18 L16,18 C17.1,18 18,17.1 18,16 L18,16 Z M5.5,10.5 L8,13.5 L11.5,9 L16,15 L2,15 L5.5,10.5 L5.5,10.5 Z" id="Shape" />
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                    <div class="tips">
+                        <span>Background panel</span>
+                    </div>
+                </div>
+                <div id="manageBgBlock">
+                    <div class="bgOption">
+                        <?xml version="1.0" ?>
+                        <!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg id="addBg" enable-background="new 0 0 70 70" height="70px" id="Icons" version="1.1" viewBox="0 0 70 70" width="70px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <polygon points="53,32.5 37.5,32.5 37.5,17 32.5,17 32.5,32.5 17,32.5 17,37.5 32.5,37.5 32.5,53 37.5,53 37.5,37.5 53,37.5 " /></svg>
+                        <div class="tips">
+                            <span>Add a new background</span>
+                        </div>
+                        <form id="addBgForm" action="./src/edit.php" method="post" enctype="multipart/form-data" target="notifications">
+                            <input type="file" name="newBg" id="newBg" accept=".gif, .png, .jpg, .svg, .jpeg, .webp">
+                        </form>
+                    </div>
+                    <div class="bgOption">
+                        <?xml version="1.0" ?>
+                        <!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg id="removeBg" enable-background="new 0 0 70 70" height="70px" id="Icons" version="1.1" viewBox="0 0 70 70" width="70px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <polygon points="45.96,20.504 35,31.464 24.04,20.504 20.504,24.04 31.464,35 20.504,45.96 24.04,49.496 35,38.536 45.96,49.496   49.496,45.96 38.536,35 49.496,24.04 " /></svg>
+                        <div class="tips">
+                            <span>Remove a background</span>
+                        </div>
+                        <form id="removeBgForm" action="./src/edit.php" method="post" class="" target="notifications">
+                            <span>Remove Background(s)</span>
+                            <?xml version="1.0" ?>
+                            <!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg height="512px" id="ConfirmBgRemove" class="disabled" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="512px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <path d="M461.6,109.6l-54.9-43.3c-1.7-1.4-3.8-2.4-6.2-2.4c-2.4,0-4.6,1-6.3,2.5L194.5,323c0,0-78.5-75.5-80.7-77.7  c-2.2-2.2-5.1-5.9-9.5-5.9c-4.4,0-6.4,3.1-8.7,5.4c-1.7,1.8-29.7,31.2-43.5,45.8c-0.8,0.9-1.3,1.4-2,2.1c-1.2,1.7-2,3.6-2,5.7  c0,2.2,0.8,4,2,5.7l2.8,2.6c0,0,139.3,133.8,141.6,136.1c2.3,2.3,5.1,5.2,9.2,5.2c4,0,7.3-4.3,9.2-6.2L462,121.8  c1.2-1.7,2-3.6,2-5.8C464,113.5,463,111.4,461.6,109.6z" /></svg>
+                            <?xml version="1.0" ?>
+                            <!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg id="resetBgRemove" enable-background="new 0 0 70 70" height="70px" id="Icons" version="1.1" viewBox="0 0 70 70" width="70px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <polygon points="45.96,20.504 35,31.464 24.04,20.504 20.504,24.04 31.464,35 20.504,45.96 24.04,49.496 35,38.536 45.96,49.496   49.496,45.96 38.536,35 49.496,24.04 " /></svg>
+                            <div id="removeBgOptionBlock">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div id="editElems">
+                <div class="panelAction">
+                    <?xml version="1.0" ?><svg id="openEdition" height="48" viewBox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 34.5v7.5h7.5l22.13-22.13-7.5-7.5-22.13 22.13zm35.41-20.41c.78-.78.78-2.05 0-2.83l-4.67-4.67c-.78-.78-2.05-.78-2.83 0l-3.66 3.66 7.5 7.5 3.66-3.66z" />
+                        <path d="M0 0h48v48h-48z" fill="none" /></svg>
+                    <div class="tips">
+                        <span>Edition panel</span>
+                    </div>
+                </div>
+                <div id="editElemsBlock">
+                    <div id="editVideoBlock" class="editSectionBlock">
+                        <div class="editSectionIcon" id="editVideoIconButton">
+                            <?xml version="1.0" ?><svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M463.1 32h-416C21.49 32-.0001 53.49-.0001 80v352c0 26.51 21.49 48 47.1 48h416c26.51 0 48-21.49 48-48v-352C511.1 53.49 490.5 32 463.1 32zM111.1 408c0 4.418-3.582 8-8 8H55.1c-4.418 0-8-3.582-8-8v-48c0-4.418 3.582-8 8-8h47.1c4.418 0 8 3.582 8 8L111.1 408zM111.1 280c0 4.418-3.582 8-8 8H55.1c-4.418 0-8-3.582-8-8v-48c0-4.418 3.582-8 8-8h47.1c4.418 0 8 3.582 8 8V280zM111.1 152c0 4.418-3.582 8-8 8H55.1c-4.418 0-8-3.582-8-8v-48c0-4.418 3.582-8 8-8h47.1c4.418 0 8 3.582 8 8L111.1 152zM351.1 400c0 8.836-7.164 16-16 16H175.1c-8.836 0-16-7.164-16-16v-96c0-8.838 7.164-16 16-16h160c8.836 0 16 7.162 16 16V400zM351.1 208c0 8.836-7.164 16-16 16H175.1c-8.836 0-16-7.164-16-16v-96c0-8.838 7.164-16 16-16h160c8.836 0 16 7.162 16 16V208zM463.1 408c0 4.418-3.582 8-8 8h-47.1c-4.418 0-7.1-3.582-7.1-8l0-48c0-4.418 3.582-8 8-8h47.1c4.418 0 8 3.582 8 8V408zM463.1 280c0 4.418-3.582 8-8 8h-47.1c-4.418 0-8-3.582-8-8v-48c0-4.418 3.582-8 8-8h47.1c4.418 0 8 3.582 8 8V280zM463.1 152c0 4.418-3.582 8-8 8h-47.1c-4.418 0-8-3.582-8-8l0-48c0-4.418 3.582-8 7.1-8h47.1c4.418 0 8 3.582 8 8V152z" /></svg>
+                        </div>
+                        <div class="editSectionData" id="editVideoData">
+                            <form id="editVideoForm" action="./src/edit.php" method="post" enctype="multipart/form-data" target="notifications">
+                                <div id="editVideoFormOption">
+                                </div>
+                                <input class="whichGame" type="text" name="game" value="">
+                            </form>
+                            <div class="formButtonBlock">
+                                <?xml version="1.0" ?>
+                                <!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg height="512px" id="ConfirmVideoEdit" class="confirmButton disabled" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="512px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <path d="M461.6,109.6l-54.9-43.3c-1.7-1.4-3.8-2.4-6.2-2.4c-2.4,0-4.6,1-6.3,2.5L194.5,323c0,0-78.5-75.5-80.7-77.7  c-2.2-2.2-5.1-5.9-9.5-5.9c-4.4,0-6.4,3.1-8.7,5.4c-1.7,1.8-29.7,31.2-43.5,45.8c-0.8,0.9-1.3,1.4-2,2.1c-1.2,1.7-2,3.6-2,5.7  c0,2.2,0.8,4,2,5.7l2.8,2.6c0,0,139.3,133.8,141.6,136.1c2.3,2.3,5.1,5.2,9.2,5.2c4,0,7.3-4.3,9.2-6.2L462,121.8  c1.2-1.7,2-3.6,2-5.8C464,113.5,463,111.4,461.6,109.6z" /></svg>
+                                <?xml version="1.0" ?>
+                                <!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg class="resetButton disabled" id="resetVideoEditForm" enable-background="new 35 35 70 70" height="70px" id="Icons" version="1.1" viewBox="35 35 70 70" width="70px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <polygon style="scale:2;" points="45.96,20.504 35,31.464 24.04,20.504 20.504,24.04 31.464,35 20.504,45.96 24.04,49.496 35,38.536 45.96,49.496   49.496,45.96 38.536,35 49.496,24.04 " /></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="editListBlock" class="editSectionBlock">
+                        <div class="editSectionIcon" id="editListIconButton">
+                            <?xml version="1.0" ?><svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M448 32H64C28.65 32 0 60.65 0 96v320c0 35.35 28.65 64 64 64h384c35.35 0 64-28.65 64-64V96C512 60.65 483.3 32 448 32zM64 96h64v64H64V96zM64 224h64v64H64V224zM64 416v-64h64v64H64zM448 416H192v-64h256V416zM448 288H192V224h256V288zM448 160H192V96h256V160z" /></svg>
+                        </div>
+                        <div class="editSectionData" id="editListData">
+                            <form id="editListForm" action="./src/edit.php" method="post" enctype="multipart/form-data" target="notifications">
+                                <div id="editListFormOption">
+                                    <div class="editDataBlock">
+                                        <label for="editListName">List name : </label>
+                                        <input type="text" name="editListName" pattern="[a-zA-Z0-9\s]+" id="editListName">
+                                        <input type="text" class="oldData" name="editListOldName" id="editListOldName">
+                                    </div>
+                                    <div class="editDataBlock">
+                                        <label for="editListLogo">List logo : </label>
+                                        <img class="previewImg" id="currentLogoPreview" src="" />
+                                        <input type="file" name="editListLogo" id="editListLogo" accept=".gif, .png, .jpg, .svg, .jpeg, .webp">
+                                        <input type="text" class="oldData" name="editListLogoType" id="editListLogoType">
+                                    </div>
+                                    <div class="editDataBlock">
+                                        <label for="editListIcon">List icon : </label>
+                                        <img class="previewImg" id="currentIconPreview" src="" />
+                                        <input type="file" name="editListIcon" id="editListIcon" accept=".gif, .png, .jpg, .svg, .jpeg, .webp">
+                                        <input type="text" class="oldData" name="editListIconType" id="editListIconType">
+                                    </div>
+                                    <div class="editDataBlock">
+                                        <label for="editListBg">List background : </label>
+                                        <img class="previewImg" id="currentBgPreview" src="" />
+                                        <input type="file" name="editListBg" id="editListBg" accept=".gif, .png, .jpg, .svg, .jpeg, .webp">
+                                        <input type="text" class="oldData" name="editListBgType" id="editListBgType">
+                                    </div>
+                                </div>
+                                <input class="whichGame" type="text" name="game" value="">
+                            </form>
+                            <div class="formButtonBlock">
+                                <?xml version="1.0" ?>
+                                <!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg height="512px" id="ConfirmListEdit" class="confirmButton disabled" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="512px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <path d="M461.6,109.6l-54.9-43.3c-1.7-1.4-3.8-2.4-6.2-2.4c-2.4,0-4.6,1-6.3,2.5L194.5,323c0,0-78.5-75.5-80.7-77.7  c-2.2-2.2-5.1-5.9-9.5-5.9c-4.4,0-6.4,3.1-8.7,5.4c-1.7,1.8-29.7,31.2-43.5,45.8c-0.8,0.9-1.3,1.4-2,2.1c-1.2,1.7-2,3.6-2,5.7  c0,2.2,0.8,4,2,5.7l2.8,2.6c0,0,139.3,133.8,141.6,136.1c2.3,2.3,5.1,5.2,9.2,5.2c4,0,7.3-4.3,9.2-6.2L462,121.8  c1.2-1.7,2-3.6,2-5.8C464,113.5,463,111.4,461.6,109.6z" /></svg>
+                                <?xml version="1.0" ?>
+                                <!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg class="resetButton disabled" id="resetListEditForm" enable-background="new 35 35 70 70" height="70px" id="Icons" version="1.1" viewBox="35 35 70 70" width="70px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <polygon style="scale:2;" points="45.96,20.504 35,31.464 24.04,20.504 20.504,24.04 31.464,35 20.504,45.96 24.04,49.496 35,38.536 45.96,49.496   49.496,45.96 38.536,35 49.496,24.04 " /></svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="manageVideo" class="panel">
+                <div class="panelAction">
+                    <?xml version="1.0" ?><svg id="openButton" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M463.1 32h-416C21.49 32-.0001 53.49-.0001 80v352c0 26.51 21.49 48 47.1 48h416c26.51 0 48-21.49 48-48v-352C511.1 53.49 490.5 32 463.1 32zM111.1 408c0 4.418-3.582 8-8 8H55.1c-4.418 0-8-3.582-8-8v-48c0-4.418 3.582-8 8-8h47.1c4.418 0 8 3.582 8 8L111.1 408zM111.1 280c0 4.418-3.582 8-8 8H55.1c-4.418 0-8-3.582-8-8v-48c0-4.418 3.582-8 8-8h47.1c4.418 0 8 3.582 8 8V280zM111.1 152c0 4.418-3.582 8-8 8H55.1c-4.418 0-8-3.582-8-8v-48c0-4.418 3.582-8 8-8h47.1c4.418 0 8 3.582 8 8L111.1 152zM351.1 400c0 8.836-7.164 16-16 16H175.1c-8.836 0-16-7.164-16-16v-96c0-8.838 7.164-16 16-16h160c8.836 0 16 7.162 16 16V400zM351.1 208c0 8.836-7.164 16-16 16H175.1c-8.836 0-16-7.164-16-16v-96c0-8.838 7.164-16 16-16h160c8.836 0 16 7.162 16 16V208zM463.1 408c0 4.418-3.582 8-8 8h-47.1c-4.418 0-7.1-3.582-7.1-8l0-48c0-4.418 3.582-8 8-8h47.1c4.418 0 8 3.582 8 8V408zM463.1 280c0 4.418-3.582 8-8 8h-47.1c-4.418 0-8-3.582-8-8v-48c0-4.418 3.582-8 8-8h47.1c4.418 0 8 3.582 8 8V280zM463.1 152c0 4.418-3.582 8-8 8h-47.1c-4.418 0-8-3.582-8-8l0-48c0-4.418 3.582-8 7.1-8h47.1c4.418 0 8 3.582 8 8V152z" /></svg>
+                    <div class="tips">
+                        <span>Video panel</span>
+                    </div>
+                </div>
+                <div id="manageVideoBlock">
+                    <div class="videoOption">
+                        <?xml version="1.0" ?>
+                        <!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg id="addVideo" enable-background="new 0 0 70 70" height="70px" id="Icons" version="1.1" viewBox="0 0 70 70" width="70px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <polygon points="53,32.5 37.5,32.5 37.5,17 32.5,17 32.5,32.5 17,32.5 17,37.5 32.5,37.5 32.5,53 37.5,53 37.5,37.5 53,37.5 " /></svg>
+                        <div class="tips">
+                            <span>Add a new video to the list </span><span class="listNameText"></span>
+                        </div>
+                        <form id="addVideoForm" action="./src/edit.php" method="post" enctype="multipart/form-data" target="notifications">
+                            <input type="file" name="newVideo" id="newVideo" accept=".webm, .mp4, .ogg">
+                            <input class="whichGame" type="text" name="game" value="">
+                        </form>
+                    </div>
+                    <div class="videoOption">
+                        <?xml version="1.0" ?>
+                        <!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg id="removeVideo" enable-background="new 0 0 70 70" height="70px" id="Icons" version="1.1" viewBox="0 0 70 70" width="70px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <polygon points="45.96,20.504 35,31.464 24.04,20.504 20.504,24.04 31.464,35 20.504,45.96 24.04,49.496 35,38.536 45.96,49.496   49.496,45.96 38.536,35 49.496,24.04 " /></svg>
+                        <div class="tips">
+                            <span>Remove a video from the list </span><span class="listNameText"></span>
+                        </div>
+                        <form id="removeVideoForm" action="./src/edit.php" method="post" class="hide" target="notifications">
+                            <span>Remove Video(s)</span>
+                            <?xml version="1.0" ?>
+                            <!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg height="512px" id="ConfirmRemove" class="disabled" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="512px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <path d="M461.6,109.6l-54.9-43.3c-1.7-1.4-3.8-2.4-6.2-2.4c-2.4,0-4.6,1-6.3,2.5L194.5,323c0,0-78.5-75.5-80.7-77.7  c-2.2-2.2-5.1-5.9-9.5-5.9c-4.4,0-6.4,3.1-8.7,5.4c-1.7,1.8-29.7,31.2-43.5,45.8c-0.8,0.9-1.3,1.4-2,2.1c-1.2,1.7-2,3.6-2,5.7  c0,2.2,0.8,4,2,5.7l2.8,2.6c0,0,139.3,133.8,141.6,136.1c2.3,2.3,5.1,5.2,9.2,5.2c4,0,7.3-4.3,9.2-6.2L462,121.8  c1.2-1.7,2-3.6,2-5.8C464,113.5,463,111.4,461.6,109.6z" /></svg>
+                            <?xml version="1.0" ?>
+                            <!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg id="resetRemove" enable-background="new 0 0 70 70" height="70px" id="Icons" version="1.1" viewBox="0 0 70 70" width="70px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <polygon points="45.96,20.504 35,31.464 24.04,20.504 20.504,24.04 31.464,35 20.504,45.96 24.04,49.496 35,38.536 45.96,49.496   49.496,45.96 38.536,35 49.496,24.04 " /></svg>
+                            <div id="removeVideoOptionBlock">
+                            </div>
+                            <input class="whichGame" type="text" name="game" value="">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div id="manageList" class="panel">
+                <div class="panelAction">
+                    <?xml version="1.0" ?><svg id="openListButton" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M448 32H64C28.65 32 0 60.65 0 96v320c0 35.35 28.65 64 64 64h384c35.35 0 64-28.65 64-64V96C512 60.65 483.3 32 448 32zM64 96h64v64H64V96zM64 224h64v64H64V224zM64 416v-64h64v64H64zM448 416H192v-64h256V416zM448 288H192V224h256V288zM448 160H192V96h256V160z" /></svg>
+                    <div class="tips">
+                        <span>List panel</span>
+                    </div>
+                </div>
+                <div id="manageListBlock">
+                    <div class="listOption">
+                        <?xml version="1.0" ?>
+                        <!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg id="addList" enable-background="new 0 0 70 70" height="70px" id="Icons" version="1.1" viewBox="0 0 70 70" width="70px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <polygon points="53,32.5 37.5,32.5 37.5,17 32.5,17 32.5,32.5 17,32.5 17,37.5 32.5,37.5 32.5,53 37.5,53 37.5,37.5 53,37.5 " /></svg>
+                        <div class="tips">
+                            <span>Create a new list</span>
+                        </div>
+                    </div>
+                    <form id="addListForm" action="./src/edit.php" method="post" enctype="multipart/form-data" target="notifications">
+                        <span>Create List</span>
+                        <?xml version="1.0" ?>
+                        <!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg height="512px" id="ConfirmCreate" class="disabled" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="512px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <path d="M461.6,109.6l-54.9-43.3c-1.7-1.4-3.8-2.4-6.2-2.4c-2.4,0-4.6,1-6.3,2.5L194.5,323c0,0-78.5-75.5-80.7-77.7  c-2.2-2.2-5.1-5.9-9.5-5.9c-4.4,0-6.4,3.1-8.7,5.4c-1.7,1.8-29.7,31.2-43.5,45.8c-0.8,0.9-1.3,1.4-2,2.1c-1.2,1.7-2,3.6-2,5.7  c0,2.2,0.8,4,2,5.7l2.8,2.6c0,0,139.3,133.8,141.6,136.1c2.3,2.3,5.1,5.2,9.2,5.2c4,0,7.3-4.3,9.2-6.2L462,121.8  c1.2-1.7,2-3.6,2-5.8C464,113.5,463,111.4,461.6,109.6z" /></svg>
+                        <?xml version="1.0" ?>
+                        <!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg id="closeAddListForm" enable-background="new 0 0 70 70" height="70px" id="Icons" version="1.1" viewBox="0 0 70 70" width="70px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <polygon points="45.96,20.504 35,31.464 24.04,20.504 20.504,24.04 31.464,35 20.504,45.96 24.04,49.496 35,38.536 45.96,49.496   49.496,45.96 38.536,35 49.496,24.04 " /></svg>
+                        <div>
+                            <label for="newListName">List name : </label><input type="text" name="newListName" id="newListName">
+                        </div>
+                        <div>
+                            <label for="newListLogo">List logo : </label> <input type="file" name="newListLogo" id="newListLogo" accept=".gif, .png, .jpg, .svg, .jpeg, .webp">
+                        </div>
+                        <div>
+                            <label for="newListIcon">List icon : </label><input type="file" name="newListIcon" id="newListIcon" accept=".gif, .png, .jpg, .svg, .jpeg, .webp">
+                        </div>
+                        <div>
+                            <label for="newListBg">List background : </label><input type="file" name="newListBg" id="newListBg" accept=".gif, .png, .jpg, .svg, .jpeg, .webp">
+                        </div>
+                    </form>
+                    <div class="listOption">
+                        <?xml version="1.0" ?>
+                        <!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg id="removeList" enable-background="new 0 0 70 70" height="70px" id="Icons" version="1.1" viewBox="0 0 70 70" width="70px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <polygon points="45.96,20.504 35,31.464 24.04,20.504 20.504,24.04 31.464,35 20.504,45.96 24.04,49.496 35,38.536 45.96,49.496   49.496,45.96 38.536,35 49.496,24.04 " /></svg>
+                        <div class="tips">
+                            <span>Remove the list </span><span class="listNameText"></span>
+                        </div>
+                    </div>
+                    <form id="removeListForm" action="./src/edit.php" method="post" enctype="multipart/form-data" target="notifications">
+                        <input class="whichGame" type="text" name="removeGame" value="">
+                    </form>
+                </div>
+            </div>
+            <div id="notifications">
+            </div>
+            <footer>
+                <p>
+                &copy; Yan 2023
+                </p>
+            </footer>
+        </div>
+        <script type="text/javascript" src="./src/siteScript.js"></script>
+</body>
+
+</html>
