@@ -266,7 +266,7 @@ The backgrounds has been removed successfully.
 
 ## Specifications
 
-**Warning : The file size limit depends on your server settings.**
+**Warning : The file size limit depends on the value of `upload_max_filesize` of your PHP server settings.**
 
 ### Image File
 
